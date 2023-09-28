@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import FacultyCard from "./FacultyCard";
 import Image from "next/image";
+import Teacherbtn from "./Teacherbtn";
 
 const items = [
   {
@@ -33,14 +34,9 @@ const Faculty: NextPage = () => {
         </div>
       </div>
 
-      <div className="rounded-lg shadow-[0px_7px_7px_rgba(0,_123,_255,_0.12)] box-border  overflow-hidden flex flex-row items-center justify-center p-3 border-1 border-solid border-neutral-40">
-        <div className="flex flex-row items-center justify-center gap-[8px] outline-none p-0">
-          <div className="  font-semibold shrink-0">meet the teachers</div>
-          <div className=" relative w-6 h-6 ">
-            <Image className="" alt="" src="/Group45535(1).svg" fill />
-          </div>
-        </div>
-      </div>
+   
+
+      <Teacherbtn />
     </div>
   );
 };

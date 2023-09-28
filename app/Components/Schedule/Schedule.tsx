@@ -52,7 +52,7 @@ const Schedule: NextPage = () => {
           </div>
 
           <div className="rounded-xl h-9 overflow-hidden shrink-0 flex flex-row items-center justify-start py-3 px-0 box-border gap-[4px] text-base text-primary-60">
-            <div className="relative leading-[24px] lowercase font-semibold">
+            <div className="relative leading-[24px] lowercase font-semibold hover:cursor-pointer">
               view more
             </div  >
             <div className="relative w-6 h-6">

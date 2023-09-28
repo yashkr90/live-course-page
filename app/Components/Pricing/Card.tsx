@@ -1,6 +1,8 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import { NextPage } from "next";
+import { motion } from "framer-motion";
 
 interface propsitem {
   months:string;
@@ -58,12 +60,24 @@ const Card:NextPage<propsitem> = ({ months, cost, recom }) => {
         </div>
         <div className="text-xs self-center font-semibold font-poppins">42.1k students enrolled</div>
       </div>
-      <button className="flex w-full bg-royalblue rounded-md p-3 justify-center gap-3 items-center">
+      <motion.button 
+            whileHover={{ scale: 1.1,transition:{
+              scale:{duration:0.2}
+        } }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ y: -100 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          staggerChildren: 0.6,
+          duration: 0.5,
+        }}
+      className="flex w-full bg-royalblue rounded-md p-3 justify-center gap-3 items-center">
         <div className="text-white self-center">enrol</div>
         <div className=" relative w-4 h-6 ">
           <Image src="Group 45535.svg" alt="" fill />
         </div>
-      </button>
+      </motion.button>
     </div>
   );
 };

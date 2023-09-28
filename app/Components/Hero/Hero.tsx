@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 // import Heroimg from "../../public/";
 import Card from "./Card";
+import Buttons from "./Buttons";
 
 const buttons = [
   {
@@ -98,37 +99,7 @@ const Hero: NextPage = () => {
           <Card />
           <div className=" w-full flex flex-col md:items-start md:justify-start  justify-center gap-5">
             {/* <div className="self-stretch flex flex-col items-start justify-start "> */}
-            <div className=" flex md:flex-row w-full flex-col items-start justify-start gap-[20px]">
-              {buttons.map((but, idx) => {
-                return (
-                  <button
-                    key={but.text}
-                    className={`flex-1 w-full rounded-2xl ${
-                      but.bg
-                    } shadow-[0px_7px_7px_rgba(0,_123,_255,_0.12)] overflow-hidden flex flex-row items-center justify-center py-3 ${
-                      idx == 1
-                        ? " text-gold border-2 border-solid border-gold"
-                        : ""
-                    }`}
-                  >
-                    <div className="flex flex-row items-center justify-center ">
-                      <div
-                        className={` ${but.textcol} font-semibold ${
-                          idx == 1 ? "text-gold" : ""
-                        }`}
-                      >
-                        {but.text}
-                      </div>
-                      <div className=" relative  w-6 h-5">
-                        <Image alt="" src={but.imgsrcs} fill />
-                      </div>
-                    </div>
-                  </button>
-                );
-              })}
-
-           
-            </div>
+         <Buttons />
             <div className=" overflow-hidden shrink-0 flex flex-row items-center justify-center py-3 px-0 box-border gap-[4px]">
               {/* <div> */}
               <div className=" font-normal text-white">download brochure</div>
