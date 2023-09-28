@@ -12,7 +12,7 @@ const Card:NextPage<propsitem> = ({ months, cost, recom }) => {
     <div className="flex flex-col rounded-2xl gap-3 bg-white p-4">
 
       {recom?(<div className="relative w-[200px] h-14 -ml-8">
-        <Image src="/tags.png" alt="" fill />
+        <Image src="/Tags.png" alt="" fill />
       </div>):''}
       
       <div className="flex justify-between gap-4">
