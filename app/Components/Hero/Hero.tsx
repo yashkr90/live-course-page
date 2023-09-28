@@ -21,19 +21,19 @@ const buttons = [
 
 const subjects = [
   {
-    id:1,
-    com:<div className="">Biology, Physics, Chemistry</div>,
-    imgsrc:"/Group.svg"
+    id: 1,
+    com: <div className="">Biology, Physics, Chemistry</div>,
+    imgsrc: "/Group.svg",
   },
   {
-    id:2,
-    com:<div className="">
-    batch starts at <span className="font-bold">24th June</span>
-  </div>,
-    imgsrc:"/Group 1000006369.svg"
-  }
-  
-  
+    id: 2,
+    com: (
+      <div className="">
+        batch starts at <span className="font-bold">24th June</span>
+      </div>
+    ),
+    imgsrc: "/Group 1000006369.svg",
+  },
 ];
 
 const Hero: NextPage = () => {
@@ -81,9 +81,12 @@ const Hero: NextPage = () => {
             </div>
           </div>
           <div className=" flex md:flex-row flex-col items-start justify-start gap-5 md:text-whitesmoke  text-neutral-100">
-            {subjects.map((sub,idx) => {
+            {subjects.map((sub, idx) => {
               return (
-                <div key={sub.id} className="flex flex-row items-center justify-start gap-3">
+                <div
+                  key={sub.id}
+                  className="flex flex-row items-center justify-start gap-3"
+                >
                   <div className="relative w-14 h-10">
                     <Image alt="" src={sub.imgsrc} fill />
                   </div>
@@ -92,17 +95,18 @@ const Hero: NextPage = () => {
                 </div>
               );
             })}
-
           </div>
           {/* <div className=" w-full text-sm"> */}
 
           <Card />
           <div className=" w-full flex flex-col md:items-start md:justify-start  justify-center gap-5">
             {/* <div className="self-stretch flex flex-col items-start justify-start "> */}
-         <Buttons />
+            <Buttons />
             <div className=" overflow-hidden shrink-0 flex flex-row items-center justify-center py-3 px-0 box-border gap-[4px]">
               {/* <div> */}
-              <div className=" font-normal md:text-white text-royalblue">download brochure</div>
+              <div className=" font-normal md:text-white text-royalblue">
+                download brochure
+              </div>
               <div className=" relative w-6 h-6 overflow-hidden shrink-0">
                 <Image className=" " alt="" src="/Component 285down.svg" fill />
               </div>

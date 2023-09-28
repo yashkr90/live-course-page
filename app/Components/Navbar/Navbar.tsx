@@ -31,15 +31,15 @@ const Navbar: NextPage = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-2 md:w-2/12 w-5/12 ml-40">
+      <div className="flex items-center gap-2 md:w-2/12 w-5/12 ml-40 md:ml-0">
         <div className=" flex md:w-auto   bg-transparent bg-white rounded-3xl px-5 py-2 text-royalblue outline-none">
           <div>Sign in</div>
         </div>
       </div>
 
-        <div className="flex items-center  w-2/12 justify-center">
+        <div className="flex items-center  md:hidden  w-2/12 justify-center">
         <div
-        className="relative  flex w-5 h-5 md:hidden "
+        className="relative  flex w-5 h-5 "
         onClick={() => setIsHidden(!isHidden)}
       >
         <Image src="/menu.svg" alt="ham" fill />
