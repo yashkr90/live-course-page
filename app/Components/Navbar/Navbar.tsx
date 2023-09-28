@@ -9,14 +9,16 @@ const Navbar:NextPage = () => {
   const [isHidden, setIsHidden] = useState<boolean>(false);
   return (
     <div className="flex bg-royalblue w-full justify-between gap-5 py-3">
-      <div className="relative w-40 h-10">
+      <div className="relative h-10 w-3/12">
         <Image src="/Group 1171276429.svg" alt="logo" fill />
       </div>
+
       <div
-        className={`md:flex md:flex-row hidden justify-between w-full text-white  items-center bg-royalblue `}
+        className={`md:flex gap-3 md:flex-row hidden justify-between w-full text-white  items-center bg-royalblue `}
       >
         <Navitems isHidden={isHidden} setIsHidden={setIsHidden} />
       </div>
+
       <div
         className={`${
           isHidden
@@ -29,7 +31,7 @@ const Navbar:NextPage = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-2 l ">
+      <div className="flex items-center gap-2 w-2/12">
         <div className=" flex bg-transparent bg-white rounded-3xl px-5 py-2 text-royalblue outline-none">
           <div>Sign in</div>
         </div>
