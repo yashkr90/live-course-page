@@ -102,7 +102,7 @@ const Hero: NextPage = () => {
          <Buttons />
             <div className=" overflow-hidden shrink-0 flex flex-row items-center justify-center py-3 px-0 box-border gap-[4px]">
               {/* <div> */}
-              <div className=" font-normal text-white">download brochure</div>
+              <div className=" font-normal md:text-white text-royalblue">download brochure</div>
               <div className=" relative w-6 h-6 overflow-hidden shrink-0">
                 <Image className=" " alt="" src="/Component 285down.svg" fill />
               </div>

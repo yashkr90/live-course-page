@@ -5,7 +5,7 @@ import Navitems from "./Navitems";
 import Image from "next/image";
 import { NextPage } from "next";
 
-const Navbar:NextPage = () => {
+const Navbar: NextPage = () => {
   const [isHidden, setIsHidden] = useState<boolean>(false);
   return (
     <div className="flex bg-royalblue w-full justify-between gap-5 py-3">
@@ -31,15 +31,21 @@ const Navbar:NextPage = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-2 w-2/12">
-        <div className=" flex bg-transparent bg-white rounded-3xl px-5 py-2 text-royalblue outline-none">
+      <div className="flex items-center gap-2 md:w-2/12 w-5/12 ml-40">
+        <div className=" flex md:w-auto   bg-transparent bg-white rounded-3xl px-5 py-2 text-royalblue outline-none">
           <div>Sign in</div>
         </div>
-
-        <div className="relative flex w-5 h-5 md:hidden " onClick={() => setIsHidden(!isHidden)}>
-          <Image src="/menu.svg" alt="ham" fill />
-        </div>
       </div>
+
+        <div className="flex items-center  w-2/12 justify-center">
+        <div
+        className="relative  flex w-5 h-5 md:hidden "
+        onClick={() => setIsHidden(!isHidden)}
+      >
+        <Image src="/menu.svg" alt="ham" fill />
+      </div>
+        </div>
+
     </div>
   );
 };
